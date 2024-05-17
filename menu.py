@@ -1,3 +1,6 @@
+import sys
+import os
+
 def positivo_nulo_negativo(num):
     if num > 0:
         tipo = 'Valor Positivo'
@@ -204,6 +207,9 @@ def menus(num=0):
     # Mensagem para interrupção do código
     except KeyboardInterrupt:
         print(f'\n\033[1;30;41m{"Até a próxima":^25}\033[m')
+        
+        # Não aparecer o erro direcionando para um arquivo vazio
+        sys.stderr = open(os.devnull, 'w')
 
 
 if __name__ == '__main__':
