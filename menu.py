@@ -47,7 +47,7 @@ def fatorial(num, cal=False):
     return num
 
 
-def menu(num=0):
+def menus(num=0):
     # Caso interrompido pelo usuario usa tratamento de erro
     try:
 
@@ -58,19 +58,19 @@ def menu(num=0):
             print('\033[1;30;44m-\033[m' * 25)
 
             # Menu
-            for men in range(1, 6):
+            for menu in range(1, 6):
                 opc = ''
-                if men == 1:
+                if menu == 1:
                     opc = 'Tipo de número(+/-)'
-                if men == 2:
+                elif menu == 2:
                     opc = 'Valor Absoluto'
-                if men == 3:
+                elif menu == 3:
                     opc = 'Fatorial'
-                if men == 4:
+                elif menu == 4:
                     opc = 'Trocar número'
-                if men == 5:
+                elif menu == 5:
                     opc = 'Sair'
-                print(f'\033[1;30;44m{f"[ {men} ] {opc}":<25}\033[m')
+                print(f'\033[1;30;44m{f"[ {menu} ] {opc}":<25}\033[m')
 
             # Loop de verificação da escolha
             while True:
@@ -92,19 +92,19 @@ def menu(num=0):
                         print('\033[1;30;44m-\033[m' * 25)
 
                         # Menu
-                        for men in range(1, 6):
+                        for menu in range(1, 6):
                             opc = ''
-                            if men == 1:
-                                opc = 'Tipo de número'
-                            if men == 2:
+                            if menu == 1:
+                                opc = 'Tipo de número(+/-)'
+                            elif menu == 2:
                                 opc = 'Valor Absoluto'
-                            if men == 3:
+                            elif menu == 3:
                                 opc = 'Fatorial'
-                            if men == 4:
+                            elif menu == 4:
                                 opc = 'Trocar número'
-                            if men == 5:
+                            elif menu == 5:
                                 opc = 'Sair'
-                            print(f'\033[1;30;44m{f"[ {men} ] {opc}":<25}\033[m')
+                            print(f'\033[1;30;44m{f"[ {menu} ] {opc}":<25}\033[m')
 
                 # Verifica se o número é uma opção válida (1 a 5)
                 if 0 < escolha < 6:
@@ -117,19 +117,19 @@ def menu(num=0):
                     print('\033[1;30;44m-\033[m' * 25)
 
                     # Menu
-                    for men in range(1, 6):
+                    for menu in range(1, 6):
                         opc = ''
-                        if men == 1:
-                            opc = 'Tipo de número'
-                        if men == 2:
+                        if menu == 1:
+                            opc = 'Tipo de número(+/-)'
+                        elif menu == 2:
                             opc = 'Valor Absoluto'
-                        if men == 3:
+                        elif menu == 3:
                             opc = 'Fatorial'
-                        if men == 4:
+                        elif menu == 4:
                             opc = 'Trocar número'
-                        if men == 5:
+                        elif menu == 5:
                             opc = 'Sair'
-                        print(f'\033[1;30;44m{f"[ {men} ] {opc}":<25}\033[m')
+                        print(f'\033[1;30;44m{f"[ {menu} ] {opc}":<25}\033[m')
 
             # Primeira opção do menu
             if escolha == 1:
@@ -207,4 +207,4 @@ def menu(num=0):
 
 
 if __name__ == '__main__':
-    menu()
+    menus()
